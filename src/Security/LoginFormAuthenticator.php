@@ -3,6 +3,7 @@
 namespace App\Security;
 
 use App\Repository\UserRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -65,7 +66,10 @@ class LoginFormAuthenticator extends AbstractAuthenticator
 
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception): ?Response
     {
-        dd('faild');
+        $request->getSession()->set(\Symfony\Component\Security\Core\Security::AUTHENTICATION_ERROR, $exception);
+        return new RedirectResponse(
+            $this->router->generate('app_login')
+        );
     }
 
 //    public function start(Request $request, AuthenticationException $authException = null): Response
