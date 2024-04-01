@@ -48,6 +48,14 @@ class QuestionController extends AbstractController
      */
     public function new()
     {
+        #Use any of these two to deny Access
+        $this->denyAccessUnlessGranted("ROLE_USER");
+
+//        if(!$this->isGranted('ROLE_USER')){
+//            throw $this->createAccessDeniedException('you are not granted');
+//        }
+
+
         return new Response('Sounds like a GREAT feature for V2!');
     }
 
