@@ -25,6 +25,7 @@ security:
                 secret: '%kernel.secret%'
                 always_remember_me: true
                 #this is a one option to turn this always remember me features, the second option is comment out in the LoginFormAuthenticator
+                signature_properties: [password]
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
