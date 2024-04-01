@@ -61,6 +61,8 @@ class LoginFormAuthenticator extends AbstractAuthenticator
                     $request->request->get('_csrf_token')
                 ),
                 new RememberMeBadge(),
+                //this is the second option to turn on the always remember me feature. Both of the option can not be used at the same time
+                //(new RememberMeBadge())->enable()
             ]
         );
 
