@@ -104,6 +104,10 @@
       <excludeFolder url="file://$MODULE_DIR$/public/build" />
       <excludeFolder url="file://$MODULE_DIR$/public/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/var" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/form" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/validator" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
